@@ -1,5 +1,5 @@
 from PIL import ImageColor
-
+#scroll to bottom for code to convert hex to RGB.
 All_COLORS = [
     ['#2E1710', '#54291D', '#7B3A2A', '#A24C35'],
     ['#994636', '#C25F4D', '#D3897B', '#E4B3AA'],
