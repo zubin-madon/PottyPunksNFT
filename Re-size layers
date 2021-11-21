@@ -1,0 +1,13 @@
+from PIL import Image
+import os
+import random
+import numpy as np
+
+fixed_height = 488
+for filename in os.listdir("layers"):
+    if filename.endswith(".png"):
+        layer = Image.open(f"layers/{filename}")
+        height_percent = (fixed_height / float(layer.size[1]))
+        width_size = int((float(layer.size[0]) * float(height_percent)))
+        layer = layer.resize((width_size, fixed_height), Image.NEAREST)
+        layer.save(f"layers/{filename}")
